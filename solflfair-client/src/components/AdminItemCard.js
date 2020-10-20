@@ -30,7 +30,7 @@ class AdminItemCard extends Component{
             return (
                      <div >
                      <div className="col s12 m6 l4">
-                     <div className="card hoverable" style={{width: '375px'},{overflow: "auto"}}>
+                     <div className="card hoverable" style={{width: '375px'},{overflow: "auto"},{boarder: "10px solid black"}}>
                      <div className="card-image">
                       <img src={item.photo} alt="" width="325" height="400"></img><br></br>
                     </div>
