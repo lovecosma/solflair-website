@@ -1,7 +1,3 @@
-const getOccurence = (array, value) => {
-    
-}
-
 
 const addItemToCart = (user, item, cart) => {
     const item_names = cart.map(i => i.name)

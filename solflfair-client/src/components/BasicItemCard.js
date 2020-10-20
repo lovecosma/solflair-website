@@ -8,7 +8,7 @@ const BasicItemCard = (props) => {
             return (
                 <div >
                 <div className="col s12 m6 l4">
-                <div className="card hoverable" style={{width: '375px'},{overflow: "auto"}}>
+                <div className="card hoverable" id="basic">
                 <Link to={{
                     pathname:`/item/${item.id}`,
                     state: {...item}  
@@ -23,6 +23,9 @@ const BasicItemCard = (props) => {
                </div>
                 <div className="card-content" style={{overflow: 'scroll'}}>
                  <p> $ { item.price } </p>
+                 <Link to="/login">
+                 <button className={"waves-effect waves-light black text-white btn"}>Log In to Add to Cart</button>
+                 </Link>
                 </div>
               </div>
             </div>

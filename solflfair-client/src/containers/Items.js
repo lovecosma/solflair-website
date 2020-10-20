@@ -9,7 +9,9 @@ import { v4 as uuidv4 } from 'uuid';
  class Items extends Component {
 
     componentDidMount() {
+      console.log("a");
         this.props.fetchItems()
+      console.log("b");
       }
     
     render() {

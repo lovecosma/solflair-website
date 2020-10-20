@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import  updateItem from '../actions/updateItem'
 import { connect } from 'react-redux'
 
@@ -46,7 +46,7 @@ export class EditItemForm extends Component {
                 <br></br>
                 <div className="card black"></div>
                 <h5 className={"center"}>Update Item</h5>
-                <form id="card-2"onSubmit={this.handleSubmit} >
+                <form id="card-2"onSubmit={this.handleSubmit}>
                     <div className={"input-field"}>
                     <input onChange={this.handleChange} type="text" name="name" id="name" value={this.state.name} placeholder={this.state.name}></input><br></br><br></br>
                     </div>

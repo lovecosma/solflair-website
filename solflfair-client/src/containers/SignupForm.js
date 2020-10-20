@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import  createUser from '../actions/createUser'
 import { connect } from 'react-redux'
+import { NavLink } from 'react-router-dom';
+
 
 
 export class SignupForm extends Component {
@@ -37,11 +39,11 @@ export class SignupForm extends Component {
             <div className={"container"} >
                   <br></br>
                   <br></br>
-                  <div className={'container center white black-text'} style={{padding: "50px"},{border: "10px double black"}} id="card">
+                  <div className={'container center white black-text'} id="sign-up">
 
                 <h2 className={'center'} >Sign Up</h2>
                 <br></br>
-               <form onSubmit={this.handleSubmit}>
+               <form onSubmit={this.handleSubmit} id="bottom" style={{padding: "50px"}}> 
                     {/* <label for="first_name">First Name:</label> */}
                     <div className={'input-field'}>
                     <input onChange={this.handleChange} type="text" name="first_name" placeholder="First name"></input><br></br><br></br>
@@ -63,6 +65,9 @@ export class SignupForm extends Component {
                     <input onChange={this.handleChange} type="password" name="password_confirmation" placeholder="Password Confirmation"></input><br></br><br></br>
                     </div>
                     <button className={"waves-effect waves-light black text-white btn"} type='submit' name='submit' id='submit'>Sign Up</button>
+                    <NavLink to="/login">
+                    <p>Already have an account? Login</p>
+                    </NavLink>
                  </form> 
                   </div>
             </div>

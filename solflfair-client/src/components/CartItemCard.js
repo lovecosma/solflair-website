@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import deleteFromCart from '../actions/deleteFromCart'
 import addItemToCart from '../actions/addItemToCart'
 
@@ -26,7 +26,7 @@ import addItemToCart from '../actions/addItemToCart'
                 <div className="black center">
                     <h3 className="center white-text">{ cartItem.name }</h3> 
                 </div>
-                    <div className={'container center white black-text'} style={{padding: "50px"},{border: "10px double black"}} id="card">
+                    <div className={'container center white black-text'} id="cart-item-card">
                     <div >
                     <div style={{width:"100%"}}>
                     <div id = "leftbox"> 
@@ -47,7 +47,7 @@ import addItemToCart from '../actions/addItemToCart'
                             & make your upcoming placement season efficient 
                             and successful. 
                         </div>  */}
-                    <div id = "rightbox" className="card-panel  black white-text">  
+                    <div id = "rightbox" className="card-panel  black white-text" >  
                     <p>Price: {(this.props.cartItem.quantity * this.props.cartItem.price).toFixed(2)}</p>
                     <p>Qty: {this.props.cartItem.quantity}</p>
                     <p style={{overflow: 'auto'}} >{this.props.cartItem.description}</p>

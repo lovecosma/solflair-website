@@ -32,11 +32,18 @@ export class Cart extends Component {
                 </div>
             )
          }else{
-            const cartItemCards = this.props.cartItemsReducer.cartItems.map(cartItem => <CartItemCard id={uuidv4()}cartItem={cartItem}cart={this.props.cartItemsReducer.cartItems}/>)
+         const cartItemCards = this.props.cartItemsReducer.cartItems.map(cartItem => {
+           return( <div>
+                 <CartItemCard id={uuidv4()}cartItem={cartItem}cart={this.props.cartItemsReducer.cartItems}/>
+                   </div>
+           )
+        })
              return (
                  <div >
-                     <br></br><br></br>
                      {cartItemCards}
+                     <div className="center" style={{padding: "15px"}}>
+                        <button>Hey</button>
+                     </div>
                  </div>
              )
          }

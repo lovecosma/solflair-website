@@ -17,7 +17,7 @@ export class Nav extends Component {
                 return (
                     <nav>
                         <div className={"nav-wrapper black"}>
-                        <a href="#" class="brand-logo center">Solflair Jewelry</a>
+                        <a href="http://localhost:3000/items" class="brand-logo center">Solflair Jewelry</a>
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
                             {/* <li><NavLink to="/upload_photos">Upload Photos</NavLink></li> */}
@@ -32,7 +32,7 @@ export class Nav extends Component {
             } else {
                return (
                     <nav className={"nav-wrapper black"}>
-                     <a href="#" class="brand-logo center">Solflair Jewelry</a>
+                        <a href="http://localhost:3000/items" class="brand-logo center">Solflair Jewelry</a>
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/items">List Products</NavLink></li>
@@ -46,7 +46,7 @@ export class Nav extends Component {
         } else {
             return (
                 <nav className={"nav-wrapper black center-align"}>
-                 <a href="#" class="brand-logo center">Solflair Jewelry</a>
+                        <a href="http://localhost:3000/items" class="brand-logo center">Solflair Jewelry</a>
                     <ul>
                         <li><NavLink to="/">Home</NavLink></li>
                         <li><NavLink to="/items">List Products</NavLink></li>

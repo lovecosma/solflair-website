@@ -15,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
      <Provider store={store} >
        <div >
-        <App />
+        <App/>
        </div>
       </Provider>
   </React.StrictMode>,

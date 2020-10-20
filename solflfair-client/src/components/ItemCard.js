@@ -4,6 +4,9 @@ import {  Link } from 'react-router-dom';
 import addItemToCart from '../actions/addItemToCart'
 
 class ItemCard extends Component{
+    state ={
+        likes: 0
+    }
 
     addItem = () => {
         const user = JSON.parse(localStorage.getItem("user"))
@@ -11,38 +14,20 @@ class ItemCard extends Component{
         this.props.history.push('/cart')
     }
 
+    addLike = () => {
+        this.setState({
+            likes: this.state.likes + 1
+        })
+    }
+
 
     render(){
         const item = this.props.item
         if (item.photo) {
-            // return ( 
-            //     <div>
-            //         <div className="col s12 m6 l4">
-            //             {/* <button className={"waves-effect waves-light black text-white btn"} >Edit</button> */}
-            //         <div className="card hoverable" style={{width: '375px'},{overflow: "auto"}}>
-            //         <Link to={{
-            //         pathname:`/item/${item.id}`,
-            //         state: {...item}  
-            //         }}><span>
-            //         <div className="card-image">
-            //          <img src={item.photo} alt="" width="250" height="400"></img><br></br>
-            //             </div>
-            //         </span>
-            //         </Link>
-            //           <span className="card-title"><h5>{ item.name }</h5></span>
-            //         <div className="card-content" style={{overflow: 'auto'}}>
-            //          <p> $ { item.price } </p>
-            //         </div>
-            //         <div className="card-action">
-            //         </div>
-            //       </div>
-            //     </div>
-            //   </div>
-            // )   
-            return (
+          return (
                 <div >
                 <div className="col s12 m6 l4">
-                <div className="card hoverable" style={{width: '375px'},{overflow: "auto"}}>
+                <div className="card hoverable" id="basic">
                 <Link to={{
                     pathname:`/item/${item.id}`,
                     state: {...item}  
@@ -60,10 +45,11 @@ class ItemCard extends Component{
                </div>
                 <div className="card-content" style={{overflow: 'scroll'}}>
                  <p> $ { item.price } </p>
-
+                 <p>{this.state.likes}</p>
                 </div>
                 <div class="card-action">
-                    <button className={"waves-effect waves-light black text-white btn"} onClick={this.addItem}>Add to Cart</button>
+                    <button className={"waves-effect waves-light black text-white btn"} onClick={this.addItem}>Add to Cart</button><br></br>
+                    <button onClick={this.addLike}>Like</button>
                 </div>
               </div>
             </div>

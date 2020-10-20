@@ -30,14 +30,14 @@ class AdminItemCard extends Component{
             return (
                      <div >
                      <div className="col s12 m6 l4">
-                     <div className="card hoverable" style={{width: '375px'},{overflow: "auto"},{boarder: "10px solid black"}}>
+                     <div className="card hoverable" id="admin-item">
                      <div className="card-image">
                       <img src={item.photo} alt="" width="325" height="400"></img><br></br>
                     </div>
-                    <div style={{padding: "1em"}}>
-                       <span><h5>{ item.name }</h5></span>
+                    <div className="flow-text" style={{padding: "1em"}}>
+                       <span><h5 className="flow-text">{ item.name }</h5></span>
                     </div>
-                     <div className="card-content" style={{overflow: 'scroll'}}>
+                     <div className="card-content" >
                       <p> $ { item.price } </p>
                        {/* <p >
                             { item.description }
