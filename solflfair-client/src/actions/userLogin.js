@@ -20,10 +20,10 @@ const userLogin = user => {
               localStorage.setItem('user', JSON.stringify(session.user))
               dispatch({type:"LOGIN", user: session.user})
             } else {
-                console.log(user.errors)
+                alert(user.errors)
             }
           })
-          .catch(error => console.log('api errors:', error))
+          .catch(error => alert('api errors:', error))
         };
     }
 

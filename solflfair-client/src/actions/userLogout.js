@@ -19,10 +19,10 @@ const userLogout = () => {
               dispatch({type:"LOGOUT"})
               localStorage.removeItem("user")
             } else {
-                console.log(session.errors)
+                alert(session.errors)
             }
           })
-          .catch(error => console.log('api errors:', error))
+          .catch(error => alert('api errors:', error))
         };
     }
 

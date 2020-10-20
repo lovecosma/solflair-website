@@ -6,7 +6,7 @@ const fetchCartItems = user => {
             .then(cartItems => {
                 dispatch({type: "FETCH_CART_ITEMS", cartItems})
             })
-            .catch(error => console.log(error)) 
+            .catch(error => alert(error)) 
         }
 }
 

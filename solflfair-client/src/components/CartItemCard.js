@@ -22,20 +22,20 @@ import addItemToCart from '../actions/addItemToCart'
         const cartItem = this.props.cartItem
         if (this.props.cartItem.photo) {
             return (
-                <div className="container">
-                <div className="black">
+                <div className="container center">
+                <div className="black center">
                     <h3 className="center white-text">{ cartItem.name }</h3> 
                 </div>
-                    <div className="card-panel hoverable body">
-                    <div className="container center">
+                    <div className={'container center white black-text'} style={{padding: "50px"},{border: "10px double black"}} id="card">
+                    <div >
                     <div style={{width:"100%"}}>
                     <div id = "leftbox"> 
                     <Link to={{
                             pathname:`/item/${cartItem.item_id}`,
                             state: {...cartItem}  
                             }}>
-                                <div className="card-image">
-                                    <img src={cartItem.photo} alt="" width="300" height="300"></img><br></br>
+                                <div className="card-image ">
+                                    <img src={cartItem.photo} alt="" width="350" height="310"style={{padding: "10px"}}></img><br></br>
                                 </div>
                         
                     </Link> 

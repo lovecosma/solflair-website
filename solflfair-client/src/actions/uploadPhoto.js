@@ -7,7 +7,6 @@ return dispatch => {
       })
         .then(res => res.json())
         .then(items => {
-            // console.log(items);
             dispatch({type: "UPDATE_ITEMS", items})
         });
     }
