@@ -6,6 +6,7 @@ class PhotosController < ApplicationController
         # The data is a file upload coming from <input type="file" />
         @item.avatar.attach(params[:file])
         # Generate a url for easy display on the front end 
+        binding.pry
         photo = url_for(@item.avatar)
         end
         # elsif params[:camera]
